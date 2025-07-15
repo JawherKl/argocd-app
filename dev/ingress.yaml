@@ -6,7 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: myapp.local
+    - host: myapp-argo-application.local
       http:
         paths:
           - path: /
