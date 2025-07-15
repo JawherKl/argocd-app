@@ -10,3 +10,14 @@ spec:
   - port: 8080
     protocol: TCP
     targetPort: 8080
+  resources:
+    requests:
+      cpu: "100m"
+    limits:
+      cpu: "500m"
+  containers:
+    envFrom:
+    - configMapRef:
+        name: myapp-config
+    - secretRef:
+        name: myapp-secret
